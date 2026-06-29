@@ -141,7 +141,7 @@ h2.big{font-family:var(--display);font-size:clamp(34px,4.5vw,56px);font-weight:7
 .builder-text p em{color:var(--lime);font-style:normal;}
 .builder-portrait{display:flex;flex-direction:column;align-items:center;gap:14px;position:sticky;top:100px;}
 .portrait-img{width:230px;height:230px;border-radius:50%;overflow:hidden;border:2px solid rgba(200,241,53,.3);transition:border-color .3s;}
-.portrait-img:hover{border-color:var(--lime);}
+.portrait-img:hover{border-color:var(--lime);} .portrait-img img{transition:filter .4s;} .portrait-img:hover img{filter:grayscale(60%);}
 .portrait-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);display:block;}
 .portrait-cap{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.08em;}
 .btags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;}
@@ -268,6 +268,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
 .ft{font-family:var(--mono);font-size:11px;color:var(--dim);}
 /* BLUEPRINT */
 [data-blueprint="true"] .hero-bg-grid{opacity:.06;background-size:40px 40px;}
+[data-blueprint="true"] .grain{opacity:0.6;filter:sepia(1) hue-rotate(180deg);}
 /* RESPONSIVE */
 @media(max-width:960px){
   nav{padding:14px 20px;}
@@ -325,6 +326,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </nav>
 <section id="hero">
+  <div class="chapter-n" aria-hidden="true">01</div>
   <div class="hero-bg-grid"></div>
   <div class="hero-bg-glow"></div>
   <div class="hero-inner">
@@ -336,6 +338,11 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
         <a href="#proof" class="btn-p">See the proof</a>
         <a href="#systems" class="btn-g">View systems</a>
         <a href="https://github.com/amrfr" target="_blank" class="btn-g">GitHub ↗</a>
+      </div>
+      <div class="hero-sub-stat r d3">
+        <div class="hss-item">5 awards</div>
+        <div class="hss-item">3 countries</div>
+        <div class="hss-item">Year 1 of 4</div>
       </div>
       <div class="hero-card r d3">
         <div class="hero-card-inner">
@@ -356,10 +363,11 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="proof">
+  <div class="chapter-n" aria-hidden="true">02</div>
   <div class="wrap">
     <div class="eyebrow r">Proof of Work</div>
     <h2 class="big r" style="margin-bottom:12px;">Not credentials.<br><span style="color:var(--lime)">Evidence.</span></h2>
-    <p class="r" style="font-size:15.5px;color:var(--muted);max-width:540px;margin-bottom:44px;line-height:1.7;">Every node is a competition entered, a system built, a judge convinced.</p>
+    <p class="r" style="font-size:15.5px;color:var(--muted);max-width:540px;margin-bottom:44px;line-height:1.7;">Every node is a competition entered, a system built, a judge convinced. <em style="color:var(--lime);font-style:normal;">Connect the dots.</em></p>
     <div class="r" style="max-width:900px;margin:0 auto;">
       <svg id="constellation-svg" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
         <defs><radialGradient id="ng" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C8F135" stop-opacity="0.25"/><stop offset="100%" stop-color="#C8F135" stop-opacity="0"/></radialGradient></defs>
@@ -377,6 +385,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="builder">
+  <div class="chapter-n" aria-hidden="true">03</div>
   <div class="wrap">
     <div class="eyebrow r">The Builder</div>
     <div class="builder-grid">
@@ -402,6 +411,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="systems">
+  <div class="chapter-n" aria-hidden="true">04</div>
   <div class="wrap">
     <div class="eyebrow r">Systems</div>
     <h2 class="big r">Things I've built<br><span style="color:var(--lime)">that actually work.</span></h2>
@@ -471,6 +481,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="record">
+  <div class="chapter-n" aria-hidden="true">05</div>
   <div class="wrap">
     <div class="eyebrow r">The Record</div>
     <h2 class="big r">Every role taught me<br><span style="color:var(--lime)">something different.</span></h2>
@@ -518,6 +529,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="beyond">
+  <div class="chapter-n" aria-hidden="true">06</div>
   <div class="wrap">
     <div class="eyebrow r">Beyond the Work</div>
     <h2 class="big r">The person you're<br><span style="color:var(--lime)">actually hiring.</span></h2>
@@ -557,6 +569,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="resume">
+  <div class="chapter-n" aria-hidden="true">07</div>
   <div class="wrap">
     <div class="eyebrow r">Resume</div>
     <h2 class="big r">The full picture.</h2>
@@ -601,6 +614,7 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
   </div>
 </section>
 <section id="contact">
+  <div class="chapter-n" aria-hidden="true">08</div>
   <div class="contact-inner">
     <div class="eyebrow r" style="justify-content:center;">The Frequency</div>
     <h2 class="contact-h r">Let's build<br><span>something that<br>shouldn't exist yet.</span></h2>
@@ -612,11 +626,23 @@ footer{padding:26px 56px;background:var(--bg);border-top:1px solid var(--border)
     </div>
   </div>
 </section>
-<footer>
+<footer style="position:relative;">
   <span class="ft">Amr Elhamady · Cairo, Egypt · 2026</span>
   <span class="ft">amrfr.github.io/portfolio</span>
   <span class="ft" id="ft-time"></span>
 </footer>
+
+<!-- LIVE LOG -->
+<div id="live-log">
+  <div class="log-header">
+    <div class="log-title"><div class="log-dot"></div>visitor.log</div>
+    <button class="log-toggle" id="log-toggle" onclick="toggleLog()" title="collapse">−</button>
+  </div>
+  <div class="log-body" id="log-body">
+    <div class="log-entry"><span class="ts" id="ts-0"></span><span class="msg">site.load() → OK</span></div>
+  </div>
+</div>
+
 <script>
 (function(){
   var fill=document.getElementById('ldf'),pct=document.getElementById('ldp'),loader=document.getElementById('loader');
@@ -645,6 +671,12 @@ window.addEventListener('scroll',function(){
   document.getElementById('sp').style.width=(s.scrollTop/(s.scrollHeight-s.clientHeight)*100)+'%';
   document.getElementById('nav').classList.toggle('stuck',s.scrollTop>60);
 },{passive:true});
+
+
+function toggleLog(){
+  var b=document.getElementById('log-body'),t=document.getElementById('log-toggle');
+  b.classList.toggle('collapsed');t.textContent=b.classList.contains('collapsed')?'+':'−';
+}
 
 function toggleBP(){
   var on=document.documentElement.dataset.blueprint==='true';
@@ -683,6 +715,41 @@ function init(){
 
   buildConstellation();
   buildTerminal();
+
+  // LIVE LOG
+  (function(){
+    var body=document.getElementById('log-body');
+    if(!body)return;
+    function ts(){return new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});}
+    function addLog(msg,hi){
+      var e=document.createElement('div');e.className='log-entry';
+      e.innerHTML='<span class="ts">['+ts()+']</span><span class="msg'+(hi?' hi':'')+'">'+msg+'</span>';
+      body.appendChild(e);body.scrollTop=body.scrollHeight;
+      while(body.children.length>12)body.removeChild(body.children[0]);
+    }
+    // Init ts
+    var ts0=document.getElementById('ts-0');if(ts0)ts0.textContent='['+ts()+']';
+    setTimeout(function(){addLog('visitor.scrolling = false');},1200);
+    var logs=[
+      {sec:'proof',   msgs:[['scanning: achievements...',''],['isef_1st_place: CONFIRMED','hi'],['yc_founders_2nd: CONFIRMED','hi'],['eu_recognition: CONFIRMED','hi']]},
+      {sec:'builder', msgs:[['profile.load() → Amr Elhamady',''],['skills: embedded_systems, data_eng, AI',''],['assessment: multi-disciplinary ★','']]},
+      {sec:'systems', msgs:[['projects.scan() → 5 found',''],['smart_street_guardian: award_winning','hi'],['seamless_saas: seed_funded','hi']]},
+      {sec:'record',  msgs:[['experience.parse() → 5 roles',''],['tatweer_misr: incoming_offer',''],['headstarter: shipped_to_production','']]},
+      {sec:'beyond',  msgs:[['personality.load()...',''],['role_model: Leonardo_da_Vinci ✓',''],['interests: cars, fragrance, football','']]},
+      {sec:'contact', msgs:[['candidate.evaluation: COMPLETE','hi'],['recommendation: SHORTLIST ★','hi'],['action: contact_amr()','hi']]},
+    ];
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var secId=e.target.id;
+        var found=logs.find(function(l){return l.sec===secId;});
+        if(found){found.msgs.forEach(function(m,i){setTimeout(function(){addLog(m[0],m[1]==='hi');},i*600);});}
+        io.unobserve(e.target);
+      });
+    },{threshold:.4});
+    document.querySelectorAll('section[id]').forEach(function(s){io.observe(s);});
+  })();
+
 
   document.querySelectorAll('.btn-p,.btn-g,.nav-cta,.btn-dl').forEach(function(btn){
     btn.addEventListener('mousemove',function(e){
